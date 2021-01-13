@@ -13,49 +13,61 @@
       gtag('config', 'G-2PR0XDCSVE');
     </script>
     <style>
+      body{
+        margin: 0;
+      }
       a {
         color: black;
         text-decoration: none;
       }
 
-      .saw{
-        color: gray;
-      }
-
-      #active{
-        color:red;
-      }
-
       h1 {
         font-size: 50px;
         text-align: center;
+        border-bottom: 1px solid black;
+        margin: 0;
+        padding: 25px;
+      }
+      ol{
+        border-right: 1px solid black;
+        width: 150px;
+        margin: 0;
+        padding: 25px;
+        padding-left: 30px;
+      }
+
+      #grid{
+        display: grid;
+        grid-template-columns: 0.2fr 1fr;
+      }
+
+      #bonmoon{
+        padding-left: 25px;
       }
     </style>
   </head>
   <body>
     <h1><a href="index.html">Home</a></h1>
-    <ol>
-        <li><a href="project-1.html" class="saw">자동차 오픈월드</a></li>
-        <li><a href="project-2.html" class="saw">게임설명</a></li>
-        <li><a href="project-3.html" class="saw" id="active">진행방식</a></li>
-    </ol>
-<!--
-    <h1><a href="index.html"><font color="_blank">Game</font></a></h1>
-    <ol>
-        <li><a href="project-1.html"><font color="_blank">자동차 오픈월드</font></a></li>
-        <li><a href="project-2.html"><font color="_blank">게임설명</font></a></li>
-        <li><a href="project-3.html"><font color="_blank">진행방식</font></a></li>
-    </ol>
-  -->
-    <h2>자동차 오픈월드</h2>
-    <img src="CarOpenWorld-Image.PNG" width="450">
 
-    <p style="margin-top: 10px;">현재 자동차 오픈월드는 유니티 버전업으로 인한 충돌해결 전까진 없을예정입니다.</p>
+    <div id="grid">
+      <ol>
+          <li><a href="project-1.html">자동차 오픈월드</a></li>
+          <li><a href="project-2.html">게임설명</a></li>
+          <li><a href="project-3.html">진행방식</a></li>
+      </ol>
 
-    <p>
-      <h4><a href="https://cafe.naver.com/lysccafe" target="_blank" title="자동차 오픈월드 카페 링크">자동차 오픈월드 카페</a></h4>
-      <h4><a href="https://play.google.com/store/apps/details?id=com.LeeSuCompany.LYSC" target="_blank" title="플레이스토어 링크">자동차 오픈월드 다운</a></h4>
-    </p>
+      <div id="bonmoon">
+        <h2>자동차 오픈월드</h2>
+          <img src="CarOpenWorld-Image.PNG" width="450">
+          <p style="margin-top: 10px;">현재 자동차 오픈월드는 유니티 버전업으로 인한 충돌해결 전까진 없을예정입니다.</p>
+      
+        <p>
+          <h4><a href="https://cafe.naver.com/lysccafe" target="_blank" title="자동차 오픈월드 카페 링크">자동차 오픈월드 카페</a></h4>
+          <h4><a href="https://play.google.com/store/apps/details?id=com.LeeSuCompany.LYSC" target="_blank" title="플레이스토어 링크">자동차 오픈월드 다운</a></h4>
+        </p>
+      </div>
+    </div>
+
         <div id="disqus_thread"></div>
           <script>
               /**
