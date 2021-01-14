@@ -1,0 +1,55 @@
+body{
+    margin: 0;
+  }
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  h1 {
+    font-size: 50px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    margin: 0;
+    padding: 25px;
+  }
+  ol{
+    border-right: 1px solid black;
+    width: 150px;
+    margin: 0;
+    padding: 25px;
+  }
+
+  #grid{
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+  }
+
+  #grid ol{
+    padding-left: 30px;
+  }
+
+  #bonmoon{
+    padding-left: 25px;
+  }
+  #sen{
+    border-bottom: 1px solid black;
+  }
+  #bo{
+    margin: 30px;
+    text-align: center;
+    font-size: 12px;
+    color: gray;
+  }
+
+  @media(max-width: 750px){
+      #grid{
+      display: block;
+    }
+    ol{
+      border-right: none;
+    }
+    h1{
+      border-bottom: none;
+    }
+  }
