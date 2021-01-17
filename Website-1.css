@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    background-color: white;
   }
   a {
     color: black;
@@ -12,15 +13,16 @@ body{
     border-bottom: 1px solid black;
     margin: 0;
     padding: 25px;
-    background-color: gray;
+    background-color: darkgray;
     position: sticky;
     top: 0px;
   }
-  ol{
+
+  #_mook{
     border-right: 1px solid black;
     width: 150px;
     margin: 0;
-    padding: 25px;
+    padding: 20px;
   }
 
   #grid{
@@ -45,11 +47,36 @@ body{
     color: gray;
   }
 
+  #_main-btn-1{
+    padding-top: 1px;
+    padding-bottom: 40px;
+  }
+
+  ._btn-1{
+    background-color: black;
+    border-bottom: 1px solid; color: powderblue;
+    padding: 12px 20px;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    float: left;
+  }
+
+  ._btn-2{
+    background-color: white;
+    border-bottom: 1px solid; color: powderblue;
+    padding: 12px 20px;
+    color: black;
+    text-align: center;
+    font-size: 12px;
+    float: right;
+  }
+
   @media(max-width: 750px){
       #grid{
       display: block;
     }
-    ol{
+    #_mook{
       border-right: none;
     }
     h1{
