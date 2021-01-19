@@ -27,19 +27,41 @@
 
           <div id="_main-btn-1">
             
-            <input type="button" class="_btn-1" value="Dark" onclick="
+            <input id="bodyColorBtn_1" type="button" class="_btn-1" value="Dark" onclick="
             var target = document.querySelector('body');
             if(this.value === 'Dark'){
               target.style.backgroundColor = 'black';
               target.style.color = 'white';
               this.value = 'White';
+              document.getElementById('bodyColorBtn_1').classList.add('_btn-2');
+              document.getElementById('bodyColorBtn_1').classList.remove('_btn-1');
               alert('아직 불안정한 Dark모드 입니다.');
+
+              var alist = document.querySelectorAll('a');
+              var i = 0;
+              while(i < alist.length){
+              console.log(alist[i]);
+              alist[i].style.color = 'powderblue';
+              i=i+1;
+              }
+
             }else{
               target.style.backgroundColor = 'white';
               target.style.color = 'black';
               this.value = 'Dark';
+              document.getElementById('bodyColorBtn_1').classList.add('_btn-1');
+              document.getElementById('bodyColorBtn_1').classList.remove('_btn-2');
+
+              var alist = document.querySelectorAll('a');
+              var i = 0;
+              while(i < alist.length){
+              console.log(alist[i]);
+              alist[i].style.color = 'black';
+              i=i+1;
+              }
+
             }
-          ">
+            ">
 
           </div>
 
@@ -100,26 +122,48 @@
             </script>
             <!--End of Tawk.to Script-->
       </p>
-
-      <div id="bo">이메일:</div>
       
       <div class="bottom_btn_1">
 
-        <input type="button" class="_btn-1" value="Dark" onclick="
+        <input id="bodyColorBtn_1" type="button" class="_btn-1" value="Dark" onclick="
         var target = document.querySelector('body');
         if(this.value === 'Dark'){
           target.style.backgroundColor = 'black';
           target.style.color = 'white';
           this.value = 'White';
+          document.getElementById('bodyColorBtn_1').classList.add('_btn-2');
+          document.getElementById('bodyColorBtn_1').classList.remove('_btn-1');
           alert('아직 불안정한 Dark모드 입니다.');
+
+          var alist = document.querySelectorAll('a');
+          var i = 0;
+          while(i < alist.length){
+          console.log(alist[i]);
+          alist[i].style.color = 'powderblue';
+          i=i+1;
+          }
+
         }else{
           target.style.backgroundColor = 'white';
           target.style.color = 'black';
           this.value = 'Dark';
+          document.getElementById('bodyColorBtn_1').classList.add('_btn-1');
+          document.getElementById('bodyColorBtn_1').classList.remove('_btn-2');
+
+          var alist = document.querySelectorAll('a');
+          var i = 0;
+          while(i < alist.length){
+          console.log(alist[i]);
+          alist[i].style.color = 'black';
+          i=i+1;
+          }
+
         }
         ">
 
        </div>
+
+       <div id="bo">이메일:</div>
       
     </body>
 </html>
