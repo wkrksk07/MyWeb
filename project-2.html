@@ -125,14 +125,14 @@
       
       <div class="bottom_btn_1">
 
-        <input id="bodyColorBtn_1" type="button" class="_btn-1" value="Dark" onclick="
+        <input id="bodyColorBtn_2" type="button" class="_btn-1" value="Dark" onclick="
         var target = document.querySelector('body');
         if(this.value === 'Dark'){
           target.style.backgroundColor = 'black';
           target.style.color = 'white';
           this.value = 'White';
-          document.getElementById('bodyColorBtn_1').classList.add('_btn-2');
-          document.getElementById('bodyColorBtn_1').classList.remove('_btn-1');
+          document.getElementById('bodyColorBtn_2').classList.add('_btn-2');
+          document.getElementById('bodyColorBtn_2').classList.remove('_btn-1');
           alert('아직 불안정한 Dark모드 입니다.');
 
           var alist = document.querySelectorAll('a');
@@ -147,8 +147,8 @@
           target.style.backgroundColor = 'white';
           target.style.color = 'black';
           this.value = 'Dark';
-          document.getElementById('bodyColorBtn_1').classList.add('_btn-1');
-          document.getElementById('bodyColorBtn_1').classList.remove('_btn-2');
+          document.getElementById('bodyColorBtn_2').classList.add('_btn-1');
+          document.getElementById('bodyColorBtn_2').classList.remove('_btn-2');
 
           var alist = document.querySelectorAll('a');
           var i = 0;
