@@ -26,17 +26,20 @@
          <div id="_mook">
 
           <div id="_main-btn-1">
-
+            
             <input type="button" class="_btn-1" value="Dark" onclick="
-            document.querySelector('body').style.backgroundColor = 'black';
-            document.querySelector('body').style.color = 'white';
-            alert('아직 불안정한 Dark모드 입니다.');
-         ">
-        
-          <input type="button" class="_btn-2" value="White" onclick="
-            document.querySelector('body').style.backgroundColor = 'white';
-            document.querySelector('body').style.color = 'black';
-         ">
+            var target = document.querySelector('body');
+            if(this.value === 'Dark'){
+              target.style.backgroundColor = 'black';
+              target.style.color = 'white';
+              this.value = 'White';
+              alert('아직 불안정한 Dark모드 입니다.');
+            }else{
+              target.style.backgroundColor = 'white';
+              target.style.color = 'black';
+              this.value = 'Dark';
+            }
+          ">
 
           </div>
 
@@ -99,6 +102,24 @@
       </p>
 
       <div id="bo">이메일:</div>
+      
+      <div class="bottom_btn_1">
+
+        <input type="button" class="_btn-1" value="Dark" onclick="
+        var target = document.querySelector('body');
+        if(this.value === 'Dark'){
+          target.style.backgroundColor = 'black';
+          target.style.color = 'white';
+          this.value = 'White';
+          alert('아직 불안정한 Dark모드 입니다.');
+        }else{
+          target.style.backgroundColor = 'white';
+          target.style.color = 'black';
+          this.value = 'Dark';
+        }
+        ">
+
+       </div>
       
     </body>
 </html>

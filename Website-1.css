@@ -34,6 +34,12 @@ body{
     padding-left: 30px;
   }
 
+  .bottom_btn_1{
+    position: absolute;
+    left: 20px;
+    bottom:   0;
+  }
+
   #bonmoon{
     padding-left: 25px;
   }
@@ -53,23 +59,12 @@ body{
   }
 
   ._btn-1{
-    background-color: black;
-    border-bottom: 1px solid; color: powderblue;
-    padding: 12px 20px;
+    background-color: gray;
+    padding: 10px 25px;
     color: white;
     text-align: center;
-    font-size: 12px;
+    font-size: 15px;
     float: left;
-  }
-
-  ._btn-2{
-    background-color: white;
-    border-bottom: 1px solid; color: powderblue;
-    padding: 12px 20px;
-    color: black;
-    text-align: center;
-    font-size: 12px;
-    float: right;
   }
 
   @media(max-width: 750px){
