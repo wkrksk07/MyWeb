@@ -7,15 +7,26 @@ body{
     text-decoration: none;
   }
 
-  h1 {
-    font-size: 50px;
+  #top_h1 {
+    font-size: 35px;
     text-align: center;
     border-bottom: 1px solid black;
     margin: 0;
-    padding: 25px;
+    padding: 10px;
     background-color: darkgray;
-    position: sticky;
-    top: 0px;
+  }
+
+  #top-1-1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  #boonmoon{
+    margin-top: 52px;
+  }
+
+  #top_menu{
+    font-size: 20px
   }
 
   #_mook{
@@ -23,6 +34,11 @@ body{
     width: 150px;
     margin: 0;
     padding: 20px;
+  }
+
+  #menu_1{
+    position: sticky;
+    top: 10px;
   }
 
   #grid{
@@ -38,10 +54,7 @@ body{
     padding-left: 20px;
     float: left;
   }
-
-  #bonmoon{
-    padding-left: 25px;
-  }
+  
   #sen{
     border-bottom: 1px solid black;
   }
@@ -55,6 +68,12 @@ body{
   #_main-btn-1{
     padding-top: 1px;
     padding-bottom: 40px;
+  }
+
+  #_main-btn-1-1{
+    padding-top: 10px;
+    padding-right: 10px;
+    float: right;
   }
 
   ._btn-1{

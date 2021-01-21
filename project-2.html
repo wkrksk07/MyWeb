@@ -15,46 +15,74 @@
 
       gtag('config', 'G-2PR0XDCSVE');
 
+      function LinksSetColor(color_1){
+        var alist = document.querySelectorAll('a');
+          var i = 0;
+          while(i < alist.length){
+          console.log(alist[i]);
+          alist[i].style.color = color_1;
+          i=i+1;
+          }
+      }
+
+      function bodySetColor(color_1){
+        document.querySelector('body').style.color = color_1;
+      }
+
+      function bodySetBackGroundColor(color_1){
+        document.querySelector('body').style.backgroundColor = color_1;
+      }
+
+      function classAddRemove(btn_1, btn_2, id_1){
+        document.getElementById(id_1).classList.add(btn_1);
+        document.getElementById(id_1).classList.remove(btn_1);
+      }
+
       function DarkwhiteHandler(self, id_1){
         var target = document.querySelector('body');
         if(self.value === 'Dark'){
-          target.style.backgroundColor = 'black';
-          target.style.color = 'white';
+          bodySetBackGroundColor('black');
+
+          bodySetColor('white');
+
           self.value = 'White';
-          document.getElementById(id_1).classList.add('_btn-2');
-          document.getElementById(id_1).classList.remove('_btn-1');
+
+          classAddRemove('_btn-2', '_btn-1', id_1);
+
           alert('아직 불안정한 Dark모드 입니다.');
-
-          var alist = document.querySelectorAll('a');
-          var i = 0;
-          while(i < alist.length){
-          console.log(alist[i]);
-          alist[i].style.color = 'powderblue';
-          i=i+1;
-          }
-
+          
+          LinksSetColor('powderblue');
+          
         }else{
-          target.style.backgroundColor = 'white';
-          target.style.color = 'black';
-          self.value = 'Dark';
-          document.getElementById(id_1).classList.add('_btn-1');
-          document.getElementById(id_1).classList.remove('_btn-2');
+          bodySetBackGroundColor('white');
 
-          var alist = document.querySelectorAll('a');
-          var i = 0;
-          while(i < alist.length){
-          console.log(alist[i]);
-          alist[i].style.color = 'black';
-          i=i+1;
+          bodySetColor('black');
+
+          self.value = 'Dark';
+
+          classAddRemove('_btn-1', '_btn-2', id_1);
+
+          LinksSetColor('black');
           }
-        } 
-      }
+        }
 
     </script>
   </head>
   <body>
 
-      <h1><a id="top-1-1" href="index.html">Home</a></h1>
+    <div id="top_h1">
+
+      <h1><a id="top-1-1" href="index.html"> 자동차 오픈월드 </a></h1>
+
+      <div id="top_menu">
+
+        <a href="project-1.html">• 자동차 오픈월드</a>
+        <a href="project-2.html">• 게임설명</a>
+        <a href="project-3.html">• 게임 업데이트</a>
+
+      </div>
+
+    </div>
 
     <div id="grid">
 
@@ -68,7 +96,7 @@
 
           </div>
 
-          <ol>
+          <ol id="menu_1">
             <li><a href="project-1.html">자동차 오픈월드</a></li>
             <li><a href="project-2.html">게임설명</a></li>
             <li><a href="project-3.html">게임 업데이트</a></li>
