@@ -12,7 +12,8 @@ body{
     border-bottom: 1px solid black;
     margin: 0;
     padding: 10px;
-    background-color: darkgray;
+    background-image: url("image/LYSC-image.png");
+    background-size: cover;
   }
 
   .top-1-1{
