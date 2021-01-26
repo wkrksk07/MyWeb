@@ -12,23 +12,25 @@ body{
     border-bottom: 1px solid black;
     margin: 0;
     padding: 10px;
-    padding-top: 100px;
+    padding-top: 85px;
     background-image: url("image/LYSC-image.png");
     background-position: center;
   }
 
   .top-1-1{
     margin-top: 45px;
-    margin-bottom: 45px;
+    margin-bottom: 60px;
     font-size: 35px;
   }
 
   #boonmoon{
+    color: black;
     margin-top: 52px;
   }
 
   #top_menu{
-    font-size: 15px
+    font-size: 15px;
+    color: yellow;
   }
 
   #_mook{
