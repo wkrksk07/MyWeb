@@ -13,7 +13,7 @@ body{
     margin: 0;
     padding: 10px;
     background-image: url("image/LYSC-image.png");
-    background-size: cover;
+    background-position: center;
   }
 
   .top-1-1{
@@ -100,10 +100,6 @@ body{
   }
 
   @media(max-width: 980px){
-
-    #top_h1 {
-      background-size: auto;
-    }
 
       #grid{
       display: block;
