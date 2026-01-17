@@ -7,8 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = { darkMode: 'class' };
-        // 1. localStorage에 설정이 있으면 그것을 따름
-        // 2. 없으면 기본적으로 'dark' 모드 적용 (시스템 설정 무시하고 기본 다크)
         if (localStorage.theme === 'light') {
             document.documentElement.classList.remove('dark');
         } else {
@@ -35,15 +33,25 @@
             <h1 class="text-4xl md:text-6xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">Welcome to LYSC</h1>
             <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12">새로운 즐거움을 창조하는 1인 게임 개발자 LYSCompany입니다.</p>
             <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 mb-20 text-left">
+                <!-- Car Open World 카드 -->
                 <a href="CarOpenWorld/" class="group relative overflow-hidden rounded-2xl shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 block">
-                    <div class="aspect-video bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center"><i data-lucide="gamepad-2" class="text-white w-16 h-16 drop-shadow-md group-hover:scale-110 transition-transform duration-500"></i></div>
+                    <!-- 이미지 설정: 가로 꽉 채움, 세로는 아래쪽 기준(object-bottom) -->
+                    <div class="aspect-video bg-gray-200 dark:bg-gray-700 flex items-center justify-center overflow-hidden relative">
+                        <img src="image/CarOpenWorld-Image.PNG" alt="Car Open World" class="w-full h-full object-cover object-bottom absolute inset-0" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <!-- 이미지 로드 실패 시 폴백 -->
+                        <div class="hidden w-full h-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
+                            <i data-lucide="gamepad-2" class="text-white w-16 h-16 drop-shadow-md group-hover:scale-110 transition-transform duration-500"></i>
+                        </div>
+                    </div>
                     <div class="p-6">
                         <div class="flex justify-between items-center mb-1"><h3 class="text-xl font-bold group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Car Open World</h3><span class="px-2 py-0.5 text-xs font-bold text-white bg-green-500 rounded-full">LIVE</span></div>
-                        <p class="text-xs text-blue-600 dark:text-blue-400 font-semibold mb-3">2021.01 출시</p>
+                        <p class="text-xs text-blue-600 dark:text-blue-400 font-semibold mb-3">2019.06 출시</p>
                         <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">자유로운 주행과 탐험이 가능한 자동차 오픈월드 게임.</p>
                         <div class="flex items-center text-blue-600 dark:text-blue-400 font-medium text-sm">자세히 보기 <i data-lucide="chevron-right" class="ml-1 w-4 h-4"></i></div>
                     </div>
                 </a>
+                
+                <!-- Escape For Car 카드 -->
                 <a href="EscapeForCar/" class="group relative rounded-2xl overflow-hidden bg-black border border-gray-800 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl block">
                     <div class="absolute inset-0 bg-black/50 z-10 flex flex-col items-center justify-center text-white group-hover:bg-black/40"><i data-lucide="lock" class="mb-2 w-8 h-8 opacity-70"></i><span class="font-bold text-lg tracking-widest uppercase opacity-80">자세히 보기</span></div>
                     <div class="opacity-40 grayscale group-hover:grayscale-0 transition-all duration-500">
@@ -51,6 +59,8 @@
                         <div class="p-6"><h3 class="text-xl font-bold text-gray-300 mb-1">Escape For Car</h3><p class="text-xs text-orange-400 font-semibold mb-3">2026년 예정</p><p class="text-sm text-gray-500">사고난 차 안에서 60초 이내에 탈출하는 게임.</p></div>
                     </div>
                 </a>
+                
+                <!-- Nuclear Survive 카드 -->
                 <a href="NuclearSurvive/" class="group relative rounded-2xl overflow-hidden bg-black border border-gray-800 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl block">
                     <div class="absolute inset-0 bg-black/50 z-10 flex flex-col items-center justify-center text-white group-hover:bg-black/40"><i data-lucide="lock" class="mb-2 w-8 h-8 opacity-70"></i><span class="font-bold text-lg tracking-widest uppercase opacity-80">자세히 보기</span></div>
                     <div class="opacity-40 grayscale group-hover:grayscale-0 transition-all duration-500">
