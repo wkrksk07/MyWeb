@@ -20,7 +20,6 @@
         .tab-content.active { display: block; } 
         .nav-btn.active { color: #2563EB; background-color: #EFF6FF; border-bottom: 2px solid #2563EB; } 
         .dark .nav-btn.active { color: #60A5FA; background-color: rgba(30, 58, 138, 0.3); border-bottom: 2px solid #60A5FA; }
-        /* 스크롤바 숨기기 */
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
@@ -36,7 +35,8 @@
                 </div>
             </div>
             
-            <nav class="hidden md:flex space-x-2">
+            <!-- PC 메뉴: 우측 정렬 -->
+            <nav class="hidden md:flex space-x-2 ml-auto mr-4">
                 <button onclick="switchTab('home')" class="nav-btn px-3 py-2 rounded-md text-sm font-medium transition-colors hover:text-gray-700 dark:hover:text-gray-300 active" data-tab="home">홈</button>
                 <button onclick="switchTab('description')" class="nav-btn px-3 py-2 rounded-md text-sm font-medium transition-colors hover:text-gray-700 dark:hover:text-gray-300" data-tab="description">게임설명</button>
                 <button onclick="switchTab('gameUpdate')" class="nav-btn px-3 py-2 rounded-md text-sm font-medium transition-colors hover:text-gray-700 dark:hover:text-gray-300" data-tab="gameUpdate">업데이트</button>
@@ -47,7 +47,7 @@
             <button onclick="toggleDarkMode()" class="p-2 rounded-full text-gray-600 dark:text-yellow-400 flex-shrink-0 ml-2"><i data-lucide="sun" class="dark:hidden"></i><i data-lucide="moon" class="hidden dark:block"></i></button>
         </div>
 
-        <!-- 모바일 가로 스크롤 탭 메뉴 -->
+        <!-- 모바일 메뉴 -->
         <div class="md:hidden border-t border-gray-200 dark:border-gray-700 overflow-x-auto scrollbar-hide">
             <nav class="flex px-2 py-1 min-w-max">
                 <button onclick="switchTab('home')" class="nav-btn flex-1 px-4 py-3 text-sm font-medium whitespace-nowrap transition-colors border-b-2 border-transparent hover:text-gray-700 dark:hover:text-gray-300 active" data-tab="home">홈</button>
