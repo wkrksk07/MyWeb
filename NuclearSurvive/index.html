@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuclear Survive - LYSCompany</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
+<<<<<<< HEAD
         tailwind.config = { darkMode: 'class' };
         if (localStorage.theme === 'light') {
             document.documentElement.classList.remove('dark');
@@ -49,10 +51,58 @@
                 <button onclick="switchTab('resources')" class="nav-btn px-4 py-3 text-sm font-medium whitespace-nowrap transition-colors border-b-2 border-transparent hover:text-gray-700 dark:hover:text-gray-300" data-tab="resources">개발 리소스</button>
                 <button onclick="switchTab('qna')" class="nav-btn px-4 py-3 text-sm font-medium whitespace-nowrap transition-colors border-b-2 border-transparent hover:text-gray-700 dark:hover:text-gray-300" data-tab="qna">Q&A</button>
             </nav>
+=======
+        tailwind.config = { darkMode: 'class' }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        body { transition: background-color 0.3s, color 0.3s; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .nav-btn.active { color: #2563EB; background-color: #EFF6FF; }
+        .dark .nav-btn.active { color: #60A5FA; background-color: rgba(30, 58, 138, 0.3); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 min-h-screen flex flex-col">
+
+    <header class="sticky top-0 z-50 backdrop-blur-md border-b bg-white/90 border-gray-200 dark:bg-gray-900/90 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="../index.html" class="mr-4 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                </a>
+                <div class="flex items-center cursor-pointer" onclick="switchTab('home')">
+                    <i data-lucide="radiation" class="w-5 h-5 mr-2 text-blue-600"></i>
+                    <span class="font-bold text-lg hidden sm:block">Nuclear Survive</span>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex space-x-2 lg:space-x-6">
+                <button onclick="switchTab('home')" class="nav-btn px-3 py-2 rounded-md text-sm font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 active" data-tab="home">홈</button>
+                <button onclick="switchTab('description')" class="nav-btn px-3 py-2 rounded-md text-sm font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700" data-tab="description">게임설명</button>
+                <button onclick="switchTab('gameUpdate')" class="nav-btn px-3 py-2 rounded-md text-sm font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700" data-tab="gameUpdate">업데이트</button>
+                <button onclick="switchTab('resources')" class="nav-btn px-3 py-2 rounded-md text-sm font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700" data-tab="resources">개발 리소스</button>
+                <button onclick="switchTab('qna')" class="nav-btn px-3 py-2 rounded-md text-sm font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700" data-tab="qna">Q&A</button>
+                
+                <div class="w-px h-6 bg-gray-300 dark:bg-gray-600 mx-2 self-center"></div>
+                <a href="../LYSC+개인+정보+처리+방침.html" class="px-3 py-2 rounded-md text-sm font-bold text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 flex items-center">
+                    <i data-lucide="shield" class="w-4 h-4 mr-1"></i> 개인정보
+                </a>
+            </nav>
+
+            <div class="flex items-center space-x-2">
+                <button onclick="toggleDarkMode()" class="p-2 rounded-full transition-colors text-gray-600 dark:text-yellow-400">
+                    <i data-lucide="sun" class="dark:hidden"></i>
+                    <i data-lucide="moon" class="hidden dark:block"></i>
+                </button>
+            </div>
+>>>>>>> parent of 9020bd3 (26.0.2)
         </div>
     </header>
 
     <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<<<<<<< HEAD
         <div class="rounded-2xl shadow-xl overflow-hidden min-h-[600px] bg-white dark:bg-gray-800 p-6 md:p-8">
             <div id="home" class="tab-content active text-center">
                 <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Nuclear Survive</h2>
@@ -70,19 +120,118 @@
                     <div id="disqus_thread"></div>
                 </div>
             </div>
+=======
+        <div class="rounded-2xl shadow-xl overflow-hidden min-h-[600px] bg-white dark:bg-gray-800 p-8">
+            
+            <div id="home" class="tab-content active">
+                <div class="text-center py-12">
+                    <h2 class="text-4xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
+                        Nuclear Survive
+                    </h2>
+                    <p class="text-xl text-gray-500 dark:text-gray-400 mb-8">
+                        2026년 출시 예정작
+                    </p>
+                    
+                    <div class="w-full max-w-3xl mx-auto aspect-video bg-gray-200 dark:bg-gray-700 rounded-xl mb-10 relative overflow-hidden group shadow-lg">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i data-lucide="construction" class="w-20 h-20 text-gray-400"></i>
+                        </div>
+                        <div class="absolute bottom-4 left-0 right-0 text-center text-gray-500 text-sm">
+                            [Nuclear Survive 개발 이미지]
+                        </div>
+                    </div>
+
+                    <div class="max-w-3xl mx-auto bg-blue-50 dark:bg-blue-900/10 border border-blue-200 dark:border-blue-900 rounded-lg p-4 mb-8 text-left">
+                        <h3 class="text-blue-600 dark:text-blue-400 font-bold mb-1 flex items-center">
+                             📢 개발 현황
+                        </h3>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">
+                            현재 도시 기능 구현 작업을 진행하고 있습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="description" class="tab-content max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold mb-6 flex items-center"><i data-lucide="file-text" class="mr-2 text-blue-500"></i> 게임 설명</h2>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+                        핵전쟁 이후 황폐화된 세상을 배경으로 하는 3D 오픈월드 생존 게임입니다. 
+                        자원을 수집하고, 은신처를 마련하여 혹독한 환경에서 살아남으세요.
+                    </p>
+                </div>
+            </div>
+
+            <div id="gameUpdate" class="tab-content max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold mb-6 flex items-center"><i data-lucide="gamepad-2" class="mr-2 text-purple-500"></i> 업데이트/개발 내역</h2>
+                <div class="p-4 border-l-4 border-purple-500 bg-purple-50 dark:bg-purple-900/10">
+                    <span class="text-xs font-bold text-purple-600 dark:text-purple-400">STATUS</span>
+                    <h3 class="text-lg font-bold mt-1">현재 도시 기능 구현 작업을 진행하고 있습니다</h3>
+                </div>
+            </div>
+
+            <div id="resources" class="tab-content max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold mb-6 flex items-center"><i data-lucide="map" class="mr-2 text-green-500"></i> 개발 리소스 & 3D 모델</h2>
+                <div class="bg-gray-50 dark:bg-gray-700/50 rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-600">
+                    <div class="aspect-video bg-gray-200 dark:bg-gray-600 flex items-center justify-center">
+                       <span class="text-gray-500">[쉘터/도시 맵 모델링 이미지]</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">작업 중인 에셋</h3>
+                        <p class="text-gray-600 dark:text-gray-300">생존을 위한 쉘터(Shelter) 내부 구현 중</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="qna" class="tab-content max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold mb-6 flex items-center"><i data-lucide="help-circle" class="mr-2 text-pink-500"></i> Q&A (질문과 답변)</h2>
+                <div class="bg-white dark:bg-gray-100 p-4 rounded-lg">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        var disqus_config = function () {
+                            this.page.url = window.location.href;  
+                            this.page.identifier = 'nuclearsurvive_qna'; 
+                        };
+                        (function() { 
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://myweb1-5.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                </div>
+            </div>
+
+>>>>>>> parent of 9020bd3 (26.0.2)
         </div>
     </main>
+
     <footer class="border-t py-8 mt-auto border-gray-200 dark:border-gray-800 text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-900">
         <div class="max-w-7xl mx-auto px-4 text-center sm:flex sm:justify-between sm:items-center">
+<<<<<<< HEAD
             <div class="mb-2">LYSCompany &copy; <span id="year"></span></div>
             <div class="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6">
                 <a href="https://cafe.naver.com/lysccafe" target="_blank" class="flex items-center hover:text-green-500 font-bold"><i data-lucide="coffee" class="w-4 h-4 mr-1"></i> 공식 카페</a>
                 <a href="../Information/LYSC개인정보처리방침.html" class="text-sm hover:text-blue-500 underline decoration-dashed flex items-center"><i data-lucide="shield" class="w-3 h-3 mr-1 text-blue-500"></i> 개인정보처리방침</a>
                 <a href="../SiteHistory/" class="text-sm hover:text-orange-500 underline decoration-dashed flex items-center"><i data-lucide="history" class="w-3 h-3 mr-1 text-orange-500"></i> 사이트 히스토리</a>
+=======
+            <div class="mb-2 sm:mb-0">
+                <span class="font-bold">LYSCompany</span> &copy; <span id="year"></span>
+            </div>
+            <div class="flex items-center justify-center space-x-6">
+                <a href="https://cafe.naver.com/lysccafe" target="_blank" class="flex items-center hover:text-green-500 transition-colors font-bold">
+                    <i data-lucide="coffee" class="w-4 h-4 mr-1"></i> 공식 카페
+                </a>
+                <a href="../LYSC+개인+정보+처리+방침.html" class="text-sm hover:text-blue-500 underline decoration-dashed flex items-center">
+                    <i data-lucide="shield" class="w-3 h-3 mr-1"></i> 개인정보처리방침
+                </a>
+>>>>>>> parent of 9020bd3 (26.0.2)
             </div>
         </div>
     </footer>
+
     <script>
+<<<<<<< HEAD
         lucide.createIcons(); document.getElementById('year').textContent = new Date().getFullYear();
         function switchTab(id) { 
             document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active')); 
@@ -98,6 +247,19 @@
             }
         }
         function toggleDarkMode() { 
+=======
+        lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.nav-btn').forEach(el => el.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            document.querySelector(`.nav-btn[data-tab="${tabId}"]`).classList.add('active');
+        }
+
+        function toggleDarkMode() {
+>>>>>>> parent of 9020bd3 (26.0.2)
             const html = document.documentElement;
             if (html.classList.contains('dark')) {
                 html.classList.remove('dark');
@@ -107,6 +269,15 @@
                 localStorage.setItem('theme', 'dark');
             }
         }
+<<<<<<< HEAD
+=======
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+>>>>>>> parent of 9020bd3 (26.0.2)
     </script>
 </body>
 </html>

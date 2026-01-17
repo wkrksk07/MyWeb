@@ -36,18 +36,25 @@
                 </div>
             </div>
             
-            <button onclick="toggleDarkMode()" class="hidden md:block p-2 rounded-full text-gray-600 dark:text-yellow-400 flex-shrink-0"><i data-lucide="sun" class="dark:hidden"></i><i data-lucide="moon" class="hidden dark:block"></i></button>
-            <button onclick="toggleDarkMode()" class="md:hidden p-2 rounded-full text-gray-600 dark:text-yellow-400 flex-shrink-0 ml-auto"><i data-lucide="sun" class="dark:hidden"></i><i data-lucide="moon" class="hidden dark:block"></i></button>
+            <nav class="hidden md:flex space-x-2">
+                <button onclick="switchTab('home')" class="nav-btn px-3 py-2 rounded-md text-sm font-medium transition-colors hover:text-gray-700 dark:hover:text-gray-300 active" data-tab="home">홈</button>
+                <button onclick="switchTab('description')" class="nav-btn px-3 py-2 rounded-md text-sm font-medium transition-colors hover:text-gray-700 dark:hover:text-gray-300" data-tab="description">게임설명</button>
+                <button onclick="switchTab('gameUpdate')" class="nav-btn px-3 py-2 rounded-md text-sm font-medium transition-colors hover:text-gray-700 dark:hover:text-gray-300" data-tab="gameUpdate">업데이트</button>
+                <button onclick="switchTab('resources')" class="nav-btn px-3 py-2 rounded-md text-sm font-medium transition-colors hover:text-gray-700 dark:hover:text-gray-300" data-tab="resources">개발 리소스</button>
+                <button onclick="switchTab('qna')" class="nav-btn px-3 py-2 rounded-md text-sm font-medium transition-colors hover:text-gray-700 dark:hover:text-gray-300" data-tab="qna">Q&A</button>
+            </nav>
+
+            <button onclick="toggleDarkMode()" class="p-2 rounded-full text-gray-600 dark:text-yellow-400 flex-shrink-0 ml-2"><i data-lucide="sun" class="dark:hidden"></i><i data-lucide="moon" class="hidden dark:block"></i></button>
         </div>
 
         <!-- 모바일 가로 스크롤 탭 메뉴 -->
-        <div class="border-t border-gray-200 dark:border-gray-700 overflow-x-auto scrollbar-hide">
-            <nav class="flex px-4 sm:px-6 lg:px-8 space-x-4 min-w-max">
-                <button onclick="switchTab('home')" class="nav-btn px-4 py-3 text-sm font-medium whitespace-nowrap transition-colors border-b-2 border-transparent hover:text-gray-700 dark:hover:text-gray-300 active" data-tab="home">홈</button>
-                <button onclick="switchTab('description')" class="nav-btn px-4 py-3 text-sm font-medium whitespace-nowrap transition-colors border-b-2 border-transparent hover:text-gray-700 dark:hover:text-gray-300" data-tab="description">게임설명</button>
-                <button onclick="switchTab('gameUpdate')" class="nav-btn px-4 py-3 text-sm font-medium whitespace-nowrap transition-colors border-b-2 border-transparent hover:text-gray-700 dark:hover:text-gray-300" data-tab="gameUpdate">업데이트</button>
-                <button onclick="switchTab('resources')" class="nav-btn px-4 py-3 text-sm font-medium whitespace-nowrap transition-colors border-b-2 border-transparent hover:text-gray-700 dark:hover:text-gray-300" data-tab="resources">개발 리소스</button>
-                <button onclick="switchTab('qna')" class="nav-btn px-4 py-3 text-sm font-medium whitespace-nowrap transition-colors border-b-2 border-transparent hover:text-gray-700 dark:hover:text-gray-300" data-tab="qna">Q&A</button>
+        <div class="md:hidden border-t border-gray-200 dark:border-gray-700 overflow-x-auto scrollbar-hide">
+            <nav class="flex px-2 py-1 min-w-max">
+                <button onclick="switchTab('home')" class="nav-btn flex-1 px-4 py-3 text-sm font-medium whitespace-nowrap transition-colors border-b-2 border-transparent hover:text-gray-700 dark:hover:text-gray-300 active" data-tab="home">홈</button>
+                <button onclick="switchTab('description')" class="nav-btn flex-1 px-4 py-3 text-sm font-medium whitespace-nowrap transition-colors border-b-2 border-transparent hover:text-gray-700 dark:hover:text-gray-300" data-tab="description">게임설명</button>
+                <button onclick="switchTab('gameUpdate')" class="nav-btn flex-1 px-4 py-3 text-sm font-medium whitespace-nowrap transition-colors border-b-2 border-transparent hover:text-gray-700 dark:hover:text-gray-300" data-tab="gameUpdate">업데이트</button>
+                <button onclick="switchTab('resources')" class="nav-btn flex-1 px-4 py-3 text-sm font-medium whitespace-nowrap transition-colors border-b-2 border-transparent hover:text-gray-700 dark:hover:text-gray-300" data-tab="resources">개발 리소스</button>
+                <button onclick="switchTab('qna')" class="nav-btn flex-1 px-4 py-3 text-sm font-medium whitespace-nowrap transition-colors border-b-2 border-transparent hover:text-gray-700 dark:hover:text-gray-300" data-tab="qna">Q&A</button>
             </nav>
         </div>
     </header>
@@ -63,7 +70,6 @@
             <div id="gameUpdate" class="tab-content max-w-4xl mx-auto"><h2 class="text-2xl font-bold mb-6 flex items-center"><i data-lucide="gamepad-2" class="mr-2 text-purple-500"></i> 업데이트</h2><div class="p-4 bg-gray-50 dark:bg-gray-700/30 rounded-lg border-l-4 border-purple-500"><p>초기 프로토타입 개발 및 물리 엔진 테스트 진행 중.</p></div></div>
             <div id="resources" class="tab-content max-w-4xl mx-auto"><h2 class="text-2xl font-bold mb-6 flex items-center"><i data-lucide="map" class="mr-2 text-green-500"></i> 개발 리소스</h2><div class="p-4 bg-gray-50 dark:bg-gray-700/30 rounded-lg border-l-4 border-green-500"><p>차량 및 게임 제작 중 (차량 내부 파손 모델링)</p></div></div>
             
-            <!-- Q&A 스크롤 영역 -->
             <div id="qna" class="tab-content max-w-4xl mx-auto">
                 <h2 class="text-2xl font-bold mb-6 flex items-center"><i data-lucide="help-circle" class="mr-2 text-pink-500"></i> Q&A</h2>
                 <div class="max-h-[600px] overflow-y-auto scrollbar-hide">
